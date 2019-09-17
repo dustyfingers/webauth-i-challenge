@@ -18,7 +18,12 @@ async function getUsers() {
     }
 }
 
+async function findBy(filter) {
+    return await db('users').where(filter);
+  }
+
 module.exports = {
     add,
-    getUsers
+    getUsers,
+    findBy
 };
